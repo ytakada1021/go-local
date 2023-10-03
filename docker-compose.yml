@@ -1,0 +1,12 @@
+version: "3.8"
+name: "go-local"
+services:
+  app:
+    build:
+      context: docker/app
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    ports:
+      - 3000:3000
